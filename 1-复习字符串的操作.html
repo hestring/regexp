@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str='fsj123kasj45flajsoi6jfijs789iodas100';
+    var arr=[];
+    var tmp='';
+    function findNum(str) {
+        for (var i=0;i<str.length;i++){
+            if (str.charAt(i)>='0'&&str.charAt(i)<=9){
+                tmp+=str.charAt(i);
+            } else {
+                if (tmp){
+                    arr.push(tmp);
+                    tmp='';
+                }
+            }
+        }
+        if (tmp){
+            arr.push(tmp);
+            tmp='';
+        }
+        return arr;
+    }
+
+    console.log(findNum(str));
+</script>
+</body>
+</html>
